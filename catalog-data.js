@@ -2,7 +2,7 @@
 const catalogData = [
     {
         id: 1,
-        title: "Kaoto - The Integration Designer for Red Hat build of Apache Camel",
+        title: "Kaoto - The Integration Designer for Red Hat Build of Apache Camel",
         category: "Integration",
         contentType: "arcade",
         imageUrl: "images/camel_rb.png",
