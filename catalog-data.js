@@ -2,18 +2,18 @@
 const catalogData = [
     {
         id: 1,
-        title: "Kaoto - The Integration Designer for Red Hat build of Apache Camel",
-        category: "Integration",
-        contentType: "arcade",
-        imageUrl: "images/camel_rb.png",
-        link: "https://www.redhat.com/architect/portfolio/detail/75-kaoto-apache-camel-integration-designer-demo"
+        title: "Enterprise Java design patterns in the cloud-native era",
+        category: "Runtimes",
+        contentType: "e-book",
+        imageUrl: "images/runtimes_rb.png",
+        link: "https://www.redhat.com/en/engage/oreilly-java-patterns-cloud"
     },
     {
         id: 2,
-        title: "Event Streaming and Real Time Data Processing with Apache Kafka",
-        category: "Messaging & Data Streaming",
-        contentType: "arcade",
-        imageUrl: "images/kafka_rb.png",
+        title: "Red Hat's Hybrid Java Strategy",
+        category: "Runtimes",
+        contentType: "slides",
+        imageUrl: "images/runtimes_rb.png",
         link: "https://interact.redhat.com/share/pYiQKLDlRICTtqM3G8Mw"
     },
     {
@@ -38,26 +38,10 @@ const catalogData = [
         category: "Runtimes",
         contentType: "video",
         imageUrl: "images/runtimes_rb.png",
-        link: "https://drive.google.com/file/d/1P600hWUZrRi4yFd9Zw1is5Yk_NUnNEtE/view"
+        link: "https://docs.google.com/presentation/d/1lM7eR4-8M-OW2ENNOcB_mmkbs7Rfbf5uopgh1C2ca94/edit?usp=sharing"
     },
     {
         id: 6,
-        title: "Red Hat Connectivity Link Technical Overview",
-        category: "Application Connectivity",
-        contentType: "slides",
-        imageUrl: "images/RHCL_rb.png",
-        link: "https://docs.google.com/presentation/d/1KOJeQhhzo-Nie8ESRfp6SqQGz5oZrXi8Xy-ahLK466U/edit#slide=id.g547716335e_0_220"
-    },
-    {
-        id: 7,
-        title: "Extending Red Hat Connectivity Link to non Kubernetes environments with Red Hat Service Interconnect",
-        category: "Application Connectivity",
-        contentType: "video",
-        imageUrl: "images/rhsi_rb.png",
-        link: "https://drive.google.com/file/d/1tVKPx8po55A0Al4BjZtQROo_DmqFveTE/view?usp=drive_link"
-    },
-    {
-        id: 8,
         title: "Quarkus Developer Productivity Features",
         category: "Runtimes",
         contentType: "video",
@@ -65,28 +49,44 @@ const catalogData = [
         link: "https://www.youtube.com/playlist?list=PLoQ0Ba0OL3iuwy2Bw3AkJbErcVOyufMF4"
     },
     {
-        id: 9,
+        id: 7,
         title: "Creating Your First Quarkus App",
         category: "Runtimes",
-        contentType: "video",
-        imageUrl: "images/runtimes_rb.png",
-        link: "https://youtu.be/WXzvg94Jy0s?si=1ohJB-0yFLNJlzgo"
+        contentType: "demo",
+        imageUrl: "images/rhsi_rb.png",
+        link: "https://developers.redhat.com/learn/openshift/build-and-deploy-quarkus-application-openshift-minutes"
     },
     {
-        id: 10,
+        id: 8,
         title: "AI for Java Application Developers (Quarkus & LangChain4j)",
         category: "Runtimes",
         contentType: "video",
         imageUrl: "images/runtimes_rb.png",
-        link: "https://www.redhat.com"
+        link: "https://quarkus.io/ai/"
+    },
+    {
+        id: 9,
+        title: "Quarkus for Spring Boot Developers",
+        category: "Runtimes",
+        contentType: "webpage",
+        imageUrl: "images/runtimes_rb.png",
+        link: "https://developers.redhat.com/products/quarkus/spring-developers"
+    },
+    {
+        id: 10,
+        title: "Camel, Kaoto, Mapper, AI",
+        category: "Runtimes",
+        contentType: "arcade",
+        imageUrl: "images/runtimes_rb.png",
+        link: "https://www.redhat.com/architect/portfolio/detail/75-kaoto-apache-camel-integration-designer-demo"
     },
     {
         id: 11,
-        title: "Connect LLMs to the world with Red Hat build of Apache Camel",
+        title: "Event Streaming and Real Time Data Processing with Red Hat streams for Apache Kafka",
         category: "Integration",
-        contentType: "arcade",
-        imageUrl: "images/camel_rb.png",
-        link: "https://interact.redhat.com/share/ahGKXu7HfZ3HcbXXM3SQ"
+        contentType: "demo",
+        imageUrl: "images/rhsi_rb.png",
+        link: "https://interact.redhat.com/share/pYiQKLDlRICTtqM3G8Mw"
     },
     {
         id: 12,
@@ -110,7 +110,7 @@ const catalogData = [
         category: "Application Foundations",
         contentType: "slides",
         imageUrl: "images/runtimes_rb.png",
-        link: "https://docs.google.com/presentation/d/14vbEh5fuDFlDDGDObm9lXBQyIzY-sJRU_Nf_144MQ0w/edit?slide=id.g6b8a41c33d_0_0#slide=id.g6b8a41c33d_0_0"
+        link: "https://docs.google.com/presentation/d/14vbEh5fuDFlDDGDObm9lXBQyIzY-sJRU_Nf_144MQ0w/edit?slide=id.g898ed3b7e3_11_0#slide=id.g898ed3b7e3_11_0"
     },
     {
         id: 15,
@@ -122,26 +122,50 @@ const catalogData = [
     },
     {
         id: 16,
-        title: "Red Hat Application Foundations Subscription Guide",
+        title: "Event Streaming and Real Time Data Processing",
         category: "Application Foundations",
-        contentType: "webpage",
+        contentType: "arcade",
         imageUrl: "images/runtimes_rb.png",
-        link: "https://www.redhat.com/en/resources/application-services-subscription-guide-detail?extIdCarryOver=true&intcmp=7013a000003SwrYAAS&sc_cid=701f2000001Css0AAC"
+        link: "https://interact.redhat.com/share/pYiQKLDlRICTtqM3G8Mw"
     },
     {
         id: 17,
-        title: "Modernizing Jakarta EE: Slim, Fast Deployments with JBoss EAP",
+        title: "Connect LLMs to the world with Red Hat build of Apache Camel",
         category: "Runtimes",
         contentType: "arcade",
         imageUrl: "images/runtimes_rb.png",
-        link: "https://interact.redhat.com/share/eZeOugd4XaljCop0Ie0B"
+        link: "https://interact.redhat.com/share/ahGKXu7HfZ3HcbXXM3SQ"
     },
     {
         id: 18,
-        title: "Minimize downtime when migrating your applications from VMware to OpenShift Virtualization, with Red Hat Service Interconnect",
-        category: "Application Connectivity",
-        contentType: "arcade",
-        imageUrl: "images/rhsi_rb.png",
-        link: "https://interact.redhat.com/share/VHFnz8T9tha8OQEvKBie"
+        title: "Getting Started with Quarkus",
+        category: "Runtimes",
+        contentType: "demo",
+        imageUrl: "images/runtimes_rb.png",
+        link: "https://developers.redhat.com/courses/quarkus/getting-started"
+    }    },
+    {
+        id: 19,
+        title: "Red Hat build of Apache Camel",
+        category: "Integration",
+        contentType: "blog",
+        imageUrl: "images/runtimes_rb.png",
+        link: "https://developers.redhat.com/products/red-hat-build-of-apache-camel"
+    },
+    {
+        id: 20,
+        title: "Overview streams for Apache Kafka",
+        category: "Application Foundations",
+        contentType: "blog",
+        imageUrl: "images/runtimes_rb.png",
+        link: "https://docs.google.com/presentation/d/1GSiQPe7EYBlgxMC1bQDESaMZRYSAB7Ab8tyBCJ-Fxnk/edit#slide=id.gba6d05b224_0_770"
+    },
+    {
+        id: 21,
+        title: "Keycloak Overview Deck",
+        category: "Application Foundations",
+        contentType: "slides",
+        imageUrl: "images/runtimes_rb.png",
+        link: "https://docs.google.com/presentation/d/1DdSpwvXONsJsDZ62xAmFK5-vPnZy5LPe8rBD8MSLvRE/edit?slide=id.ge917b646ac_0_4446#slide=id.ge917b646ac_0_4446"
     }
 ]; 
