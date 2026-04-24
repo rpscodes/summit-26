@@ -36,7 +36,7 @@ const catalogData = [
         id: 5,
         title: "EAP on OpenShift",
         category: "Runtimes",
-        contentType: "video",
+        contentType: "slides",
         imageUrl: "images/runtimes_rb.png",
         link: "https://docs.google.com/presentation/d/1lM7eR4-8M-OW2ENNOcB_mmkbs7Rfbf5uopgh1C2ca94/edit?usp=sharing"
     },
@@ -60,7 +60,7 @@ const catalogData = [
         id: 8,
         title: "AI for Java Application Developers (Quarkus & LangChain4j)",
         category: "Runtimes",
-        contentType: "video",
+        contentType: "webpage",
         imageUrl: "images/runtimes_rb.png",
         link: "https://quarkus.io/ai/"
     },
@@ -156,7 +156,7 @@ const catalogData = [
         id: 20,
         title: "Overview streams for Apache Kafka",
         category: "Application Foundations",
-        contentType: "blog",
+        contentType: "slides",
         imageUrl: "images/kafka_rb.png",
         link: "https://docs.google.com/presentation/d/1GSiQPe7EYBlgxMC1bQDESaMZRYSAB7Ab8tyBCJ-Fxnk/edit#slide=id.gba6d05b224_0_770"
     },
