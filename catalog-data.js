@@ -53,7 +53,7 @@ const catalogData = [
         title: "Creating Your First Quarkus App",
         category: "Runtimes",
         contentType: "demo",
-        imageUrl: "images/rhsi_rb.png",
+        imageUrl: "images/runtimes_rb.png",
         link: "https://developers.redhat.com/learn/openshift/build-and-deploy-quarkus-application-openshift-minutes"
     },
     {
@@ -85,7 +85,7 @@ const catalogData = [
         title: "Event Streaming and Real Time Data Processing with Red Hat streams for Apache Kafka",
         category: "Integration",
         contentType: "demo",
-        imageUrl: "images/rhsi_rb.png",
+        imageUrl: "images/kafka_rb.png",
         link: "https://interact.redhat.com/share/pYiQKLDlRICTtqM3G8Mw"
     },
     {
@@ -133,7 +133,7 @@ const catalogData = [
         title: "Connect LLMs to the world with Red Hat build of Apache Camel",
         category: "Runtimes",
         contentType: "arcade",
-        imageUrl: "images/runtimes_rb.png",
+        imageUrl: "images/camel_rb.png",
         link: "https://interact.redhat.com/share/ahGKXu7HfZ3HcbXXM3SQ"
     },
     {
@@ -149,7 +149,7 @@ const catalogData = [
         title: "Red Hat build of Apache Camel",
         category: "Integration",
         contentType: "blog",
-        imageUrl: "images/runtimes_rb.png",
+        imageUrl: "images/camel_rb.png",
         link: "https://developers.redhat.com/products/red-hat-build-of-apache-camel"
     },
     {
