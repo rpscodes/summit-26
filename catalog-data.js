@@ -157,7 +157,7 @@ const catalogData = [
         title: "Overview streams for Apache Kafka",
         category: "Application Foundations",
         contentType: "blog",
-        imageUrl: "images/runtimes_rb.png",
+        imageUrl: "images/kafka_rb.png",
         link: "https://docs.google.com/presentation/d/1GSiQPe7EYBlgxMC1bQDESaMZRYSAB7Ab8tyBCJ-Fxnk/edit#slide=id.gba6d05b224_0_770"
     },
     {
