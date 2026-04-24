@@ -143,7 +143,7 @@ const catalogData = [
         contentType: "demo",
         imageUrl: "images/runtimes_rb.png",
         link: "https://developers.redhat.com/courses/quarkus/getting-started"
-    }    },
+    },
     {
         id: 19,
         title: "Red Hat build of Apache Camel",
