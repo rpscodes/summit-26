@@ -4,7 +4,7 @@ const catalogData = [
         id: 1,
         title: "Enterprise Java design patterns in the cloud-native era",
         category: "Runtimes",
-        contentType: "e-book",
+        contentType: "webpage",
         imageUrl: "images/runtimes_rb.png",
         link: "https://www.redhat.com/en/engage/oreilly-java-patterns-cloud"
     },
@@ -131,7 +131,7 @@ const catalogData = [
     {
         id: 17,
         title: "Connect LLMs to the world with Red Hat build of Apache Camel",
-        category: "Runtimes",
+        category: "Application Foundations",
         contentType: "arcade",
         imageUrl: "images/camel_rb.png",
         link: "https://interact.redhat.com/share/ahGKXu7HfZ3HcbXXM3SQ"
