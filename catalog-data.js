@@ -82,11 +82,11 @@ const catalogData = [
     },
     {
         id: 11,
-        title: "Event Streaming and Real Time Data Processing with Red Hat streams for Apache Kafka",
-        category: "Integration",
-        contentType: "demo",
-        imageUrl: "images/kafka_rb.png",
-        link: "https://interact.redhat.com/share/pYiQKLDlRICTtqM3G8Mw"
+        title: "Red Hat Application Foundations Customer Deck",
+        category: "Application Foundations",
+        contentType: "slides",
+        imageUrl: "images/runtimes_rb.png",
+        link: "https://docs.google.com/presentation/d/1BGjhQVI16iYtQfsGdoX3VAZLOPUBJgla0clfxR38LrU/edit?slide=id.g31b831aad22_0_2829#slide=id.g31b831aad22_0_2829"
     },
     {
         id: 12,
@@ -98,11 +98,11 @@ const catalogData = [
     },
     {
         id: 13,
-        title: "Red Hat Application Foundations Customer Deck",
-        category: "Application Foundations",
-        contentType: "slides",
-        imageUrl: "images/runtimes_rb.png",
-        link: "https://docs.google.com/presentation/d/1BGjhQVI16iYtQfsGdoX3VAZLOPUBJgla0clfxR38LrU/edit?slide=id.g31b831aad22_0_2829#slide=id.g31b831aad22_0_2829"
+        title: "Event Streaming and Real Time Data Processing with Red Hat streams for Apache Kafka",
+        category: "Integration",
+        contentType: "demo",
+        imageUrl: "images/kafka_rb.png",
+        link: "https://interact.redhat.com/share/pYiQKLDlRICTtqM3G8Mw"
     },
     {
         id: 14,
