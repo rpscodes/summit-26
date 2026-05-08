@@ -75,7 +75,7 @@ const catalogData = [
     {
         id: 10,
         title: "Camel, Kaoto, Mapper, AI",
-        category: "Runtimes",
+        category: "Application Foundations",
         contentType: "arcade",
         imageUrl: "images/runtimes_rb.png",
         link: "https://www.redhat.com/architect/portfolio/detail/75-kaoto-apache-camel-integration-designer-demo"
