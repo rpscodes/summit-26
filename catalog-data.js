@@ -75,7 +75,7 @@ const catalogData = [
     {
         id: 10,
         title: "Camel, Kaoto, Mapper, AI",
-        category: "Application Foundations",
+        category: "Integration",
         contentType: "arcade",
         imageUrl: "images/runtimes_rb.png",
         link: "https://www.redhat.com/architect/portfolio/detail/75-kaoto-apache-camel-integration-designer-demo"
@@ -99,7 +99,7 @@ const catalogData = [
     {
         id: 13,
         title: "Event Streaming and Real Time Data Processing with Red Hat streams for Apache Kafka",
-        category: "Application Foundations",
+        category: "Integration",
         contentType: "demo",
         imageUrl: "images/kafka_rb.png",
         link: "https://interact.redhat.com/share/pYiQKLDlRICTtqM3G8Mw"
@@ -147,7 +147,7 @@ const catalogData = [
     {
         id: 19,
         title: "Red Hat build of Apache Camel",
-        category: "Application Foundations",
+        category: "Integration",
         contentType: "blog",
         imageUrl: "images/camel_rb.png",
         link: "https://developers.redhat.com/products/red-hat-build-of-apache-camel"
