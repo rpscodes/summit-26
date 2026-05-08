@@ -58,11 +58,11 @@ const catalogData = [
     },
     {
         id: 8,
-        title: "AI for Java Application Developers (Quarkus & LangChain4j)",
-        category: "Runtimes",
-        contentType: "webpage",
+        title: "Red Hat Application Foundations Customer Deck",
+        category: "Application Foundations",
+        contentType: "slides",
         imageUrl: "images/runtimes_rb.png",
-        link: "https://quarkus.io/ai/"
+        link: "https://docs.google.com/presentation/d/1BGjhQVI16iYtQfsGdoX3VAZLOPUBJgla0clfxR38LrU/edit?slide=id.g31b831aad22_0_2829#slide=id.g31b831aad22_0_2829"
     },
     {
         id: 9,
@@ -82,11 +82,11 @@ const catalogData = [
     },
     {
         id: 11,
-        title: "Red Hat Application Foundations Customer Deck",
-        category: "Application Foundations",
-        contentType: "slides",
+        title: "AI for Java Application Developers (Quarkus & LangChain4j)",
+        category: "Runtimes",
+        contentType: "webpage",
         imageUrl: "images/runtimes_rb.png",
-        link: "https://docs.google.com/presentation/d/1BGjhQVI16iYtQfsGdoX3VAZLOPUBJgla0clfxR38LrU/edit?slide=id.g31b831aad22_0_2829#slide=id.g31b831aad22_0_2829"
+        link: "https://quarkus.io/ai/"
     },
     {
         id: 12,
