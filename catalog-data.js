@@ -62,7 +62,7 @@ const catalogData = [
         category: "Application Foundations",
         contentType: "slides",
         imageUrl: "images/runtimes_rb.png",
-        link: "https://docs.google.com/presentation/d/1BGjhQVI16iYtQfsGdoX3VAZLOPUBJgla0clfxR38LrU/edit?slide=id.g31b831aad22_0_2829#slide=id.g31b831aad22_0_2829"
+        link: "https://docs.google.com/presentation/d/1rRObJHFl188gSk_U4oCZwtLtIbElzNzrjDGE4CH4BsA/edit?usp=sharing"
     },
     {
         id: 9,
