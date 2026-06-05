@@ -1,87 +1,303 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resource Catalog | Red Hat Summit</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;600;700&family=Red+Hat+Text:wght@400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <header class="site-header">
-        <div class="container">
-            <nav class="main-nav" aria-label="Main navigation">
-                <div class="logo-container">
-                    <a href="#" class="red-hat-summit-logo" aria-label="Red Hat Summit">
-                        <div class="logo-text-container">
-                            <div class="logo-text-top">Red Hat</div>
-                            <div class="logo-text-bottom">Summit</div>
-                        </div>
-                        <div class="logo-pointer"></div>
-                    </a>
-                    <span class="app-dev-text">Red Hat App Services</span>
-                </div>
-                <ul class="main-menu">
-                    <li><a href="https://www.redhat.com/en/products/application-foundations" target="_blank" rel="noopener noreferrer">RHAF</a></li>
-                    <li><a href="https://www.solutionpatterns.io/patterns/" target="_blank" rel="noopener noreferrer">Solution Patterns</a></li>
-                    <li><a href="https://events.experiences.redhat.com/widget/redhat/sum26/SessionCatalog2026?tab.day=20260511" target="_blank" rel="noopener noreferrer">Summit Agenda</a></li>
-                    <li><a href="https://developers.redhat.com/" target="_blank" rel="noopener noreferrer">Developers</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-    <main>
-        <section class="hero">
-            <div class="container hero-grid">
-                <div class="hero-content">
-                    <h1 class="hero-title">Resource Catalog</h1>
-                    <p class="hero-subtitle">Explore demos, decks, and guides from Red Hat Summit — all in one place.</p>
-                </div>
-                <div id="featured-video-card" class="featured-video-card" role="button" tabindex="0" aria-label="Play booth display video">
-                    <div class="featured-video-thumb">
-                        <img
-                            src="https://img.youtube.com/vi/iWJYOJ1Ro2Q/hqdefault.jpg"
-                            alt="Booth display video preview"
-                            class="featured-video-image"
-                        >
-                        <div class="play-button"><i class="fa-solid fa-play"></i></div>
-                    </div>
-                    <div class="featured-video-info">
-                        <div class="featured-video-label">Featured</div>
-                        <div class="featured-video-title">Booth Display Video</div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <div class="container">
-            <section class="toolbar" aria-label="Search and filter">
-                <div class="toolbar-panel">
-                    <div class="search-container">
-                        <i class="fa-solid fa-magnifying-glass search-icon" aria-hidden="true"></i>
-                        <input type="search" id="search-input" placeholder="Search by title..." aria-label="Search resources by title">
-                        <button id="search-button" type="button">Search</button>
-                    </div>
-                    <div class="filter-container" role="group" aria-label="Filter by category">
-                        <button class="filter-button active" data-category="all" type="button">All</button>
-                    </div>
-                    <p id="result-count" class="result-count" aria-live="polite"></p>
-                </div>
-            </section>
-            <section class="catalog-container" id="catalog-container" aria-label="Resource catalog"></section>
-        </div>
-    </main>
-    <div id="video-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-label="Booth display video" aria-hidden="true">
-        <div class="modal-content">
-            <button id="modal-close" class="modal-close" type="button" aria-label="Close video"><i class="fa-solid fa-xmark"></i></button>
-            <div class="modal-video-container">
-                <iframe id="modal-iframe" title="Booth display video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-        </div>
-    </div>
-    <script src="catalog-data.js"></script>
-    <script src="app.js"></script>
-</body>
-</html>
+:root {
+    --bg-base: #0f0f0f;
+    --bg-surface: #1a1a1a;
+    --bg-elevated: #242424;
+    --bg-input: #141414;
+    --border-subtle: #2e2e2e;
+    --border-strong: #3a3a3a;
+    --text-primary: #f5f5f5;
+    --text-secondary: #a3a3a3;
+    --text-muted: #737373;
+    --accent: #ee0000;
+    --accent-hover: #cc0000;
+    --accent-glow: rgba(238, 0, 0, 0.2);
+    --cat-runtimes: #ee0000;
+    --cat-foundations: #f0ab00;
+    --cat-integration: #2ec4b6;
+    --cat-connectivity: #4dabf7;
+    --radius-sm: 6px;
+    --radius-md: 12px;
+    --radius-lg: 16px;
+    --shadow-card: 0 4px 24px rgba(0, 0, 0, 0.4);
+    --shadow-hover: 0 8px 32px rgba(0, 0, 0, 0.5), 0 0 0 1px var(--border-subtle);
+    --transition: 0.2s ease;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+    font-family: 'Red Hat Text', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-primary);
+    background-color: var(--bg-base);
+    min-height: 100vh;
+}
+h1, h2, h3 { font-family: 'Red Hat Display', 'Red Hat Text', sans-serif; }
+.container { width: 90%; max-width: 1200px; margin: 0 auto; }
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: var(--bg-surface);
+    border-bottom: 1px solid var(--border-subtle);
+    backdrop-filter: blur(8px);
+}
+.main-nav { display: flex; align-items: center; gap: 1.5rem; padding: 1rem 0; flex-wrap: wrap; }
+.logo-container { display: flex; align-items: center; gap: 1rem; }
+.red-hat-summit-logo {
+    display: block;
+    width: 140px;
+    height: 50px;
+    background-color: var(--accent);
+    border-radius: var(--radius-sm);
+    color: white;
+    text-align: center;
+    position: relative;
+    padding: 5px 10px;
+    text-decoration: none;
+    transition: background var(--transition);
+}
+.red-hat-summit-logo:hover { background-color: var(--accent-hover); }
+.logo-text-container { display: flex; flex-direction: column; justify-content: center; align-items: center; height: 100%; }
+.logo-text-top { font-size: 14px; font-weight: bold; }
+.logo-text-bottom { font-size: 22px; font-weight: bold; margin-top: -3px; }
+.logo-pointer {
+    position: absolute;
+    bottom: -8px;
+    left: 20px;
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 8px solid var(--accent);
+}
+.app-dev-text { color: var(--text-secondary); font-size: 0.95rem; font-weight: 500; }
+.main-menu { display: flex; list-style: none; gap: 1.25rem; margin-left: auto; flex-wrap: wrap; }
+.main-menu a { color: var(--text-secondary); text-decoration: none; font-size: 0.95rem; font-weight: 500; transition: color var(--transition); }
+.main-menu a:hover { color: var(--accent); }
+.hero { padding: 3rem 0 2rem; background: radial-gradient(ellipse at 50% 0%, rgba(238, 0, 0, 0.08) 0%, transparent 60%); }
+.hero-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: center; }
+.hero-title { font-size: clamp(2rem, 4vw, 2.75rem); font-weight: 700; line-height: 1.15; margin-bottom: 0.75rem; letter-spacing: -0.02em; }
+.hero-subtitle { color: var(--text-secondary); font-size: 1.1rem; max-width: 480px; }
+.featured-video-card {
+    background: var(--bg-surface);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+}
+.featured-video-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-hover);
+    border-color: rgba(238, 0, 0, 0.4);
+}
+.featured-video-thumb {
+    position: relative;
+    aspect-ratio: 16 / 9;
+    background: var(--bg-elevated);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+.featured-video-image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.featured-video-thumb::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(238, 0, 0, 0.15), transparent 60%);
+    z-index: 1;
+}
+.play-button {
+    position: relative;
+    z-index: 2;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: var(--accent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.5rem;
+    box-shadow: 0 4px 20px var(--accent-glow);
+    transition: transform var(--transition), background var(--transition);
+}
+.featured-video-card:hover .play-button {
+    transform: scale(1.08);
+    background: var(--accent-hover);
+}
+.featured-video-info { padding: 1.25rem 1.5rem; }
+.featured-video-label { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent); font-weight: 600; margin-bottom: 0.35rem; }
+.featured-video-title { font-size: 1.1rem; font-weight: 600; }
+.toolbar { position: sticky; top: 72px; z-index: 90; background: var(--bg-base); padding: 1rem 0 1.25rem; margin-bottom: 0.5rem; }
+.toolbar-panel { background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 1.25rem 1.5rem; }
+.search-container { display: flex; margin-bottom: 1rem; position: relative; }
+.search-icon { position: absolute; left: 1rem; top: 50%; transform: translateY(-50%); color: var(--text-muted); pointer-events: none; }
+#search-input {
+    flex: 1;
+    padding: 0.85rem 1rem 0.85rem 2.75rem;
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-sm) 0 0 var(--radius-sm);
+    font-size: 1rem;
+    background-color: var(--bg-input);
+    color: var(--text-primary);
+    outline: none;
+    transition: border-color var(--transition), box-shadow var(--transition);
+}
+#search-input::placeholder { color: var(--text-muted); }
+#search-input:focus { border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-glow); }
+#search-button {
+    padding: 0.85rem 1.5rem;
+    background-color: var(--accent);
+    color: white;
+    border: none;
+    border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: background var(--transition);
+}
+#search-button:hover { background-color: var(--accent-hover); }
+.filter-container { display: flex; flex-wrap: nowrap; gap: 0.5rem; overflow-x: auto; padding-bottom: 0.25rem; scrollbar-width: thin; }
+.filter-button {
+    padding: 0.5rem 1rem;
+    background-color: var(--bg-elevated);
+    border: 1px solid var(--border-subtle);
+    border-radius: 999px;
+    cursor: pointer;
+    font-size: 0.875rem;
+    transition: all var(--transition);
+    color: var(--text-secondary);
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+.filter-button:hover { border-color: var(--border-strong); color: var(--text-primary); }
+.filter-button.active { background-color: var(--accent); color: white; border-color: var(--accent); box-shadow: 0 0 16px var(--accent-glow); }
+.result-count { margin-top: 0.75rem; font-size: 0.85rem; color: var(--text-muted); }
+.catalog-container { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.5rem; padding: 1rem 0 3rem; }
+.catalog-item {
+    background-color: var(--bg-surface);
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border-subtle);
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: hidden;
+    transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+}
+.catalog-item::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 4px; background: var(--cat-accent, var(--accent)); }
+.catalog-item[data-category="Runtimes"] { --cat-accent: var(--cat-runtimes); }
+.catalog-item[data-category="Application Foundations"] { --cat-accent: var(--cat-foundations); }
+.catalog-item[data-category="Integration"] { --cat-accent: var(--cat-integration); }
+.catalog-item[data-category="Application Connectivity"] { --cat-accent: var(--cat-connectivity); }
+.catalog-item:hover { transform: translateY(-4px); box-shadow: var(--shadow-hover); border-color: var(--border-strong); }
+.catalog-item-inner { padding: 1.5rem; display: flex; flex-direction: column; flex-grow: 1; padding-left: 1.75rem; }
+.catalog-image-container { height: 72px; width: 72px; margin-bottom: 1.25rem; background-color: var(--bg-elevated); display: flex; align-items: center; justify-content: center; border-radius: var(--radius-sm); border: 1px solid var(--border-subtle); }
+.catalog-image { width: 100%; height: 100%; object-fit: contain; padding: 8px; }
+.catalog-meta { display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 0.75rem; }
+.catalog-category { font-size: 0.8rem; font-weight: 600; color: var(--cat-accent, var(--accent)); text-transform: uppercase; letter-spacing: 0.04em; }
+.content-type-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    background: var(--bg-elevated);
+    color: var(--text-secondary);
+    padding: 0.2rem 0.6rem;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    border: 1px solid var(--border-subtle);
+}
+.content-type-chip i { color: var(--text-muted); font-size: 0.7rem; }
+.catalog-title {
+    font-size: 1.2rem;
+    margin-bottom: 1.25rem;
+    color: var(--text-primary);
+    font-weight: 600;
+    line-height: 1.35;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    flex-grow: 1;
+}
+.catalog-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.6rem 1.1rem;
+    background-color: transparent;
+    color: var(--text-primary);
+    font-size: 0.9rem;
+    font-weight: 600;
+    border: 1px solid var(--border-strong);
+    border-radius: var(--radius-sm);
+    text-decoration: none;
+    transition: all var(--transition);
+    width: fit-content;
+    margin-top: auto;
+}
+.catalog-button:hover { background-color: var(--accent); border-color: var(--accent); color: white; }
+.no-results { text-align: center; padding: 4rem 2rem; grid-column: 1 / -1; color: var(--text-muted); }
+.no-results i { font-size: 2.5rem; margin-bottom: 1rem; display: block; opacity: 0.5; }
+.no-results p { font-size: 1.1rem; }
+.modal-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.85);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+.modal-overlay.active { display: flex; }
+.modal-content {
+    background: var(--bg-elevated);
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border-subtle);
+    box-shadow: var(--shadow-card);
+    max-width: 800px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+.modal-close {
+    position: absolute;
+    top: 12px;
+    right: 14px;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    font-size: 1.25rem;
+    color: var(--text-primary);
+    background: rgba(0, 0, 0, 0.6);
+    border: 1px solid var(--border-subtle);
+    cursor: pointer;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background var(--transition);
+}
+.modal-close:hover { background: var(--accent); border-color: var(--accent); }
+.modal-video-container { width: 100%; aspect-ratio: 16 / 9; background: #000; }
+.modal-video-container iframe { width: 100%; height: 100%; border: none; }
+@media (max-width: 768px) {
+    .hero-grid { grid-template-columns: 1fr; }
+    .hero { padding: 2rem 0 1.5rem; }
+    .main-nav { flex-direction: column; align-items: flex-start; }
+    .main-menu { margin-left: 0; }
+    .toolbar { top: auto; }
+    .search-container { flex-direction: column; }
+    #search-input { border-radius: var(--radius-sm); margin-bottom: 0.5rem; }
+    #search-button { border-radius: var(--radius-sm); }
+    .catalog-container { grid-template-columns: 1fr; }
+}
