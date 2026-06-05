@@ -45,7 +45,7 @@ const catalogData = [
         title: "Quarkus Developer Productivity Features",
         category: "Runtimes",
         contentType: "video",
-        imageUrl: "images/runtimes_rb.png",
+        imageUrl: "images/quarkus_rb.png",
         link: "https://www.youtube.com/playlist?list=PLoQ0Ba0OL3iuwy2Bw3AkJbErcVOyufMF4"
     },
     {
@@ -53,7 +53,7 @@ const catalogData = [
         title: "Creating Your First Quarkus App",
         category: "Runtimes",
         contentType: "demo",
-        imageUrl: "images/runtimes_rb.png",
+        imageUrl: "images/quarkus_rb.png",
         link: "https://developers.redhat.com/learn/openshift/build-and-deploy-quarkus-application-openshift-minutes"
     },
     {
@@ -61,7 +61,7 @@ const catalogData = [
         title: "Red Hat Application Foundations Customer Deck",
         category: "Application Foundations",
         contentType: "slides",
-        imageUrl: "images/runtimes_rb.png",
+        imageUrl: "images/RHCL_rb.png",
         link: "https://docs.google.com/presentation/d/1rRObJHFl188gSk_U4oCZwtLtIbElzNzrjDGE4CH4BsA/edit?usp=sharing"
     },
     {
@@ -69,7 +69,7 @@ const catalogData = [
         title: "Quarkus for Spring Boot Developers",
         category: "Runtimes",
         contentType: "webpage",
-        imageUrl: "images/runtimes_rb.png",
+        imageUrl: "images/quarkus_rb.png",
         link: "https://developers.redhat.com/products/quarkus/spring-developers"
     },
     {
@@ -77,7 +77,7 @@ const catalogData = [
         title: "Camel, Kaoto, Mapper, AI",
         category: "Integration",
         contentType: "arcade",
-        imageUrl: "images/kafka_rb.png",
+        imageUrl: "images/camel_rb.png",
         link: "https://www.redhat.com/architect/portfolio/detail/75-kaoto-apache-camel-integration-designer-demo"
     },
     {
@@ -85,7 +85,7 @@ const catalogData = [
         title: "AI for Java Application Developers (Quarkus & LangChain4j)",
         category: "Runtimes",
         contentType: "webpage",
-        imageUrl: "images/runtimes_rb.png",
+        imageUrl: "images/quarkus_rb.png",
         link: "https://quarkus.io/ai/"
     },
     {
@@ -109,7 +109,7 @@ const catalogData = [
         title: "Red Hat Application Foundations Technical Deck",
         category: "Application Foundations",
         contentType: "slides",
-        imageUrl: "images/runtimes_rb.png",
+        imageUrl: "images/RHCL_rb.png",
         link: "https://docs.google.com/presentation/d/14vbEh5fuDFlDDGDObm9lXBQyIzY-sJRU_Nf_144MQ0w/edit?slide=id.g898ed3b7e3_11_0#slide=id.g898ed3b7e3_11_0"
     },
     {
@@ -117,7 +117,7 @@ const catalogData = [
         title: "Red Hat Application Foundations Datasheet",
         category: "Application Foundations",
         contentType: "webpage",
-        imageUrl: "images/runtimes_rb.png",
+        imageUrl: "images/RHCL_rb.png",
         link: "https://www.redhat.com/en/resources/application-foundations-datasheet"
     },
     {
@@ -125,7 +125,7 @@ const catalogData = [
         title: "Event Streaming and Real Time Data Processing",
         category: "Application Foundations",
         contentType: "arcade",
-        imageUrl: "images/runtimes_rb.png",
+        imageUrl: "images/kafka_rb.png",
         link: "https://interact.redhat.com/share/pYiQKLDlRICTtqM3G8Mw"
     },
     {
@@ -141,7 +141,7 @@ const catalogData = [
         title: "Getting Started with Quarkus",
         category: "Runtimes",
         contentType: "demo",
-        imageUrl: "images/runtimes_rb.png",
+        imageUrl: "images/quarkus_rb.png",
         link: "https://developers.redhat.com/courses/quarkus/getting-started"
     },
     {
@@ -165,7 +165,7 @@ const catalogData = [
         title: "Keycloak Overview Deck",
         category: "Application Foundations",
         contentType: "slides",
-        imageUrl: "images/runtimes_rb.png",
+        imageUrl: "images/RHCL_rb.png",
         link: "https://docs.google.com/presentation/d/1DdSpwvXONsJsDZ62xAmFK5-vPnZy5LPe8rBD8MSLvRE/edit?slide=id.ge917b646ac_0_4446#slide=id.ge917b646ac_0_4446"
     },
     {
@@ -173,7 +173,8 @@ const catalogData = [
         title: "Camel, Kaoto, Mapper, AI",
         category: "Application Foundations",
         contentType: "arcade",
-        imageUrl: "images/kafka_rb.png",
+        imageUrl: "images/camel_rb.png",
         link: "https://www.redhat.com/architect/portfolio/detail/75-kaoto-apache-camel-integration-designer-demo"
     },
 ]; 
+
